@@ -12,5 +12,6 @@ if __name__ == "__main__":
     authors_file = sys.argv[1]
     authors_df = spark.read.schema(schema).json(authors_file)
     print(authors_df.head(3))
+    authors_df.show()
     authors_df.printSchema()
 
